@@ -71,6 +71,7 @@ void solve() {
     }
   }
   if (tmp > 1) factors.push_back(tmp);
+  // Answer is number of numbers coprime to m in the range (a, a + m]:
   cout << getRP(m, a + m, factors) - getRP(m, a - 1, factors) - 1 << endl;
 }
 
