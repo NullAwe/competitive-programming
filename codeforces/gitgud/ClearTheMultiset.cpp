@@ -18,7 +18,8 @@ int solve(vector<int>& arr, int l, int r) {
     // Finds the answer, which is the minimum of using the first operation and not:
     return min(m + solve(arr, l, r), r - l);
   }
-  // Finds the answer in this case, which is the answer of the left array added to the answer of the right:
+  // Finds the answer in this case, which is the answer of the array left of the 0
+  // added to the answer of the array right of the 0:
   return solve(arr, l, ind) + solve(arr, ind + 1, r);
 }
 
