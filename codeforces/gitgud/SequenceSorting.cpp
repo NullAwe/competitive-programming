@@ -11,7 +11,8 @@ void solve() {
     if (ends[arr[i]].first < 0) ends[arr[i]].first = i;
     ends[arr[i]].second = i;
   }
-  // Finds longest subset of sorted array that appears as a subsequence in the original array:
+  // Finds largest cardinality of a complete subset of the sorted array
+  // that appears as a subsequence in the original array:
   int count = 0, ml = 1, length = 0;
   pair<int, int> last = {-1, -1};
   for (int i = 0; i <= n; ++i) {
