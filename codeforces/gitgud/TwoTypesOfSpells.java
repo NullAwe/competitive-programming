@@ -128,6 +128,7 @@ public class TwoTypesOfSpells {
       type = t;
     }
 
+    // Fire spells is better to have in doubled TreeSet than lightning spells:
     public int compareTo(Move other) {
       if (power != other.power) return power - other.power;
       return other.type - type;
