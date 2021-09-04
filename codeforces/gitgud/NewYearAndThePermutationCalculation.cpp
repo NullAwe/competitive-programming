@@ -3,7 +3,7 @@ using namespace std;
 
 #define ll long long
 
-const ll MOD = 998244353;
+const int MOD = 998244353;
 
 ll exp(ll x, ll y) {
   if (y <= 0) return 1;
