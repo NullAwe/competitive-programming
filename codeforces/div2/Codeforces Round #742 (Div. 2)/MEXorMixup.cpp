@@ -11,6 +11,7 @@ void solve(vector<int>& xors) {
 
 int main() {
   int t; cin >> t;
+  // Computes the XOR of the first n integers, n from 0 to 300000:
   vector<int> xors(300001);
   for (int i = 1; i < xors.size(); ++i) xors[i] = xors[i - 1] ^ i;
   for (int i = 0; i < t; ++i) solve(xors);
