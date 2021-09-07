@@ -11,18 +11,18 @@ int main() {
   // Calculates the answer by iterating through the endpoints:
   int i = 0, j = 0, ans = 0, count = 0;
   while (i < n || j < n) {
-	int m = INT_MAX;
-	if (i < n) m = min(m, b[i]);
-	if (j < n) m = min(m, e[j]);
-	while (i < n && b[i] == m) {
-	  ++count;
-	  ++i;
-	}
-	while (j < n && e[j] == m) {
-	  --count;
-	  ++j;
-	}
-	ans = max(ans, count);
+    int m = INT_MAX;
+    if (i < n) m = min(m, b[i]);
+    if (j < n) m = min(m, e[j]);
+    while (i < n && b[i] == m) {
+      ++count;
+      ++i;
+    }
+    while (j < n && e[j] == m) {
+      --count;
+      ++j;
+    }
+    ans = max(ans, count);
   }
   // Output:
   cout << ans << endl;
