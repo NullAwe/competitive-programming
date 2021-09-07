@@ -6,7 +6,7 @@ int main() {
   set<int> s;
   for (int i = 0; i < n; ++i) {
     int a; cin >> a;
-	  s.insert(a);
+    s.insert(a);
   }
   // Output:
   cout << s.size() << endl;
