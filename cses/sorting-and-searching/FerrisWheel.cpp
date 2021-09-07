@@ -9,7 +9,7 @@ int main() {
   int left = 0, right = n - 1, ans = 0;
   while (left <= right) {
     if (left == right || arr[left] + arr[right] > x) --right, ++ans;
-	  else ++left, --right, ++ans;
+    else ++left, --right, ++ans;
   }
   // Output:
   cout << ans << endl;
