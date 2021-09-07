@@ -10,9 +10,9 @@ int main() {
   sort(ppl.begin(), ppl.end());
   int i = 0, j = 0, ans = 0;
   while (i < n && j < m) {
-	  if (apt[i] < ppl[j] - k) ++i;
-  	else if (apt[i] > ppl[j] + k) ++j;
-  	else ++i, ++j, ++ans;
+    if (apt[i] < ppl[j] - k) ++i;
+    else if (apt[i] > ppl[j] + k) ++j;
+    else ++i, ++j, ++ans;
   }
   // Output:
   cout << ans << endl;
