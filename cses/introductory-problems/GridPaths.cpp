@@ -22,7 +22,7 @@ void paths(int x, int y) {
   int num = input[ind];
   ++ind;
   if (num == -1) {
-  	// Tries all directions:
+    // Tries all directions:
     paths(x, y - 1);
     paths(x, y + 1);
     paths(x + 1, y);
