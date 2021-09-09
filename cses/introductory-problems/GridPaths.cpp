@@ -10,6 +10,7 @@ bool avail(int x, int y) {
 }
 
 void paths(int x, int y) {
+  // Adds one to answer if we get to the answer:
   if (ind >= 48 && x == 6 && y == 0) {
 	  ++ans;
 	  return;
@@ -47,7 +48,7 @@ int main() {
   	else if (str[i] == 'D') input[i] = 0;
   	else if (str[i] == 'U') input[i] = 1;
 	  else if (str[i] == 'L') input[i] = 2;
-  	else input[i] = 3;
+    else input[i] = 3;
   }
   // Finds all paths following the input starting at (0, 0):
   paths(0, 0);
