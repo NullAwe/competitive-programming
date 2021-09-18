@@ -19,6 +19,7 @@ int main() {
         }
       }
     }
+    // Output:
     cout << "Case #" << i << ": " << changes << endl;
   }
   return 0;
