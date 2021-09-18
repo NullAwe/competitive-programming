@@ -13,6 +13,7 @@ int main() {
       if (ch == 'O' || ch == 'X') {
         if (cur == ' ') cur = ch;
         if (ch != cur) {
+          // Increments changes because he has to switch hands:
           cur = ch;
           ++changes;
         }
