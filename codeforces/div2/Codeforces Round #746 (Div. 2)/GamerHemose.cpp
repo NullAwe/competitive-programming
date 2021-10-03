@@ -11,7 +11,7 @@ void solve() {
   // Output:
   if (left == 0) cout << ans << endl;
   else if (left < m) cout << ans + 1 << endl;
-  else cout << ans << endl;
+  else cout << ans + 2 << endl;
 }
 
 int main() {
