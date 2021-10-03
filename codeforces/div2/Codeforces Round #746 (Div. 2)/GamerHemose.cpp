@@ -10,7 +10,7 @@ void solve() {
     ans = (h / (m + m2)) * 2;
   // Output:
   if (left == 0) cout << ans << endl;
-  else if (left < m) cout << ans + 1 << endl;
+  else if (left <= m) cout << ans + 1 << endl;
   else cout << ans + 2 << endl;
 }
 
