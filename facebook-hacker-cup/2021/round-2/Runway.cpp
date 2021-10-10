@@ -38,9 +38,7 @@ int main() {
       styles = order;
     }
     // Output:
-    cout << "Case #" << i << ": ";
-    cout << change;
-    cout << endl;
+    cout << "Case #" << i << ": " << change << endl;
   }
   return 0;
 }
