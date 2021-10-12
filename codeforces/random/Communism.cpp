@@ -6,6 +6,7 @@ using namespace std;
 int main() {
   int n, a, b; cin >> n >> a >> b;
   string str; cin >> str;
+  // Precomputates some information:
   vector<bool> has(26);
   vector<char> encoded;
   for (int i = 0; i < n; ++i) {
