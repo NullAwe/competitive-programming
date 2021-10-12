@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int MAX_LEN = 400001, MAX_DP = 1 << 20;
+const int MAX_LEN = 400001;
 
 int main() {
   int n; cin >> n;
@@ -22,7 +22,7 @@ int main() {
     diffs[i] = diff;
   }
   // Finds answer using bitmask dynamic programming:
-  vector<pair<pair<int, int>, bool>> dp(MAX_DP, {{0, 0}, false});
+  vector<pair<pair<int, int>, bool>> dp(1 << n, {{0, 0}, false});
   dp[0] = {{0, 0}, true};
   int ans = 0;
   for (int i = 1; i < (1 << n); ++i) {
