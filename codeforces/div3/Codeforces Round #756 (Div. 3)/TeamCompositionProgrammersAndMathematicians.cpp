@@ -3,7 +3,7 @@ using namespace std;
 
 void solve() {
   int a, b; cin >> a >> b;
-  // Output:
+  // Output (min takes care of if there isn't enough people of one type):
   cout << min((a + b) / 4, min(a, b)) << endl;
 }
 
