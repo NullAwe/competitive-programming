@@ -5,8 +5,10 @@ void solve() {
   int n; cin >> n;
   vector<int> arr(n); for (int i = 0; i < n; ++i) cin >> arr[i];
   // Output:
-  if (arr[0] == n || arr[n - 1] == n) for (int i = n - 1; i >= 0; --i) cout << arr[i] << ' ';
-  else cout << -1;
+  if (arr[0] == n || arr[n - 1] == n) {
+    // Prints the reverse of the array:
+    for (int i = n - 1; i >= 0; --i) cout << arr[i] << ' ';
+  } else cout << -1;
   cout << endl;
 }
 
