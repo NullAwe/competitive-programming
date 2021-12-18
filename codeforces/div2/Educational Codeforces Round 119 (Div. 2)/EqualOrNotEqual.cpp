@@ -5,6 +5,7 @@ void solve() {
   string str; cin >> str;
   int n = 0;
   for (int i = 0; i < str.size(); ++i) if (str[i] == 'N') ++n;
+  // Output:
   cout << (n == 1 ? "NO" : "YES") << endl;
 }
 
