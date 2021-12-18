@@ -15,6 +15,7 @@ void solve() {
     }
     ans = max(ans, (i < 2 ? h : w) * (last - first));
   }
+  // Output:
   cout << ans << endl;
 }
 
