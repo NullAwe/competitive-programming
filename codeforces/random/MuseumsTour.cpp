@@ -8,11 +8,12 @@ const int MAX_SZ = 5000001, MAX_N = 100001;
 
 int n, m, d;
 vi adj[MAX_SZ];
-int times[MAX_SZ], low[MAX_SZ], scc[MAX_SZ], counts[MAX_SZ];
+int times[MAX_SZ], low[MAX_SZ], scc[MAX_SZ], counts[MAX_SZ], mw[MAX_SZ];
 ll open[MAX_N];
 bool vis[MAX_SZ], vis2[MAX_N];
 stack<int> s, s2;
 int ticks = 0, sccID = -1;
+vector<vi> sccAdj;
 
 inline void tarjan(int u) {
   times[u] = low[u] = ++ticks;
@@ -37,11 +38,20 @@ inline void tarjan(int u) {
   while (s2.size()) { vis2[s2.top()] = false; s2.pop(); }
 }
 
+int dp(int u) {
+  if (vis[u]) return mw[u];
+  mw[u] = counts[u];
+  vis[u] = true;
+  for (int v : sccAdj[u]) mw[u] = max(mw[u], dp(v) + counts[u]);
+  return mw[u];
+}
+
 int main() {
   for (int i = 0; i < MAX_SZ; ++i) {
     times[i] = low[i] = scc[i] = -1;
     counts[i] = 0;
     vis[i] = false;
+    mw[i] = 0;
   }
   for (int i = 0; i < MAX_N; ++i) {
     vis2[i] = false;
@@ -54,30 +64,13 @@ int main() {
     if (fa < 0) fa = a;
     for (int j = 0; j < d; ++j) adj[a * d + j].push_back(b * d + (j + 1) % d);
   }
-  // Takes care of testcases where my code doesn't work because this is a stupid problem:
-  if (fa == 18097) {
-    cout << 31692 << endl;
-    return 0;
-  } else if (fa == 65822) {
-    cout << 79 << endl;
-    return 0;
-  } else if (fa == 41679) {
-    cout << 31802 << endl;
-    return 0;
-  } else if (fa == 3224) {
-    cout << 70 << endl;
-    return 0;
-  } else if (fa == 70236) {
-    cout << 58 << endl;
-    return 0;
-  }
   string line;
   for (int i = 0; i < n; ++i) {
     cin >> line;
     for (int j = 0; j < d; ++j) open[i] |= 1LL * (line[j] - '0') << j;
   }
   tarjan(0); ++sccID;
-  vector<vi> sccAdj(sccID);
+  sccAdj = vector<vi>(sccID);
   for (int i = 0; i < n * d; ++i) {
     if (low[i] < 0) continue;
     int b1 = scc[i];
@@ -87,21 +80,6 @@ int main() {
       if (b1 != b2) sccAdj[b1].push_back(b2);
     }
   }
-  vi mw(sccID, 0);
-  vector<bool> sccVis(sccID, false);
-  mw[scc[0]] = counts[scc[0]];
-  queue<int> q; q.push(scc[0]); sccVis[scc[0]] = true;
-  while (q.size()) {
-    int node = q.front(); q.pop();
-    for (int next : sccAdj[node]) {
-      mw[next] = max(mw[next], mw[node] + counts[next]);
-      if (sccVis[next]) continue;
-      q.push(next); sccVis[next] = true;
-    }
-  }
-  int ans = 0;
-  for (int num : mw) ans = max(ans, num);
-  // Output:
-  cout << ans << endl;
+  cout << dp(scc[0]) << endl;
   return 0;
 }
