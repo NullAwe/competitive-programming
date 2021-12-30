@@ -5,7 +5,7 @@ void solve() {
   int n; cin >> n;
   // Output:
   for (int i = 0; i < n; ++i) cout << i + 2 << ' ';
-  cout << endl;
+  cout << '\n';
 }
 
 int main() {
