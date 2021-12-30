@@ -23,7 +23,7 @@ void solve() {
       else cout << n + 1 - val << ' ' << n + 2 - val << ' ';
     }
   }
-  cout << endl;
+  cout << '\n';
 }
 
 int main() {
