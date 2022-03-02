@@ -12,4 +12,5 @@ ll p(int x, int y) {
 int main() {
   int n; cin >> n;
   cout << 6 * p(4, n - 2) + (n - 3) * 9 * p(4, n - 3) << '\n';
+  return 0;
 }
