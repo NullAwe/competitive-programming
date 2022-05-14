@@ -110,6 +110,7 @@ void solve() {
 }
 
 int main() {
+  ios_base::sync_with_stdio(false); cin.tie(NULL);
   // Comment out the below three lines if there is only one test case per test
   // (uncomment if already commented out):
   int t; cin >> t;
