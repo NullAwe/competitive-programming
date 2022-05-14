@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <random>
+#include <bits/stdc++.h>
 using namespace std;
 
 #define ll long long
