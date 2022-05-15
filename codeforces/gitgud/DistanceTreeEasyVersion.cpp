@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, sz;
+int n;
 vector<vector<int>> adj;
 vector<int> parent, levels;
 
