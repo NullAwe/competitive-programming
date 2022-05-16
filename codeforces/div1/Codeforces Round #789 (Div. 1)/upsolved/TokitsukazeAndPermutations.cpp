@@ -10,7 +10,7 @@ void solve() {
   vector<int> arr(n); for (int i = 0; i < n; ++i) cin >> arr[i];
   for (int i = 0; i < n; ++i) {
     if (arr[i] > i || (n - i <= k && arr[i] > 0)) {
-      cout << "0\n";
+      cout << 0 << '\n';
       return;
     }
   }
