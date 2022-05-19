@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <utility>
+#include <bits/stdc++.h>
 using namespace std;
 
 #define ll long long
