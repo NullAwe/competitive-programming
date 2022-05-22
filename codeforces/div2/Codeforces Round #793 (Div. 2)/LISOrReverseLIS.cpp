@@ -9,7 +9,7 @@ void solve() {
     if (once.count(a)) once.erase(a), twice.insert(a);
     else if (!twice.count(a)) once.insert(a);
   }
-  cout << (once.size() + 1) / 2 + twice.size() << '\n';
+  cout << ((once.size() + 1) >> 1) + twice.size() << '\n';
 }
 
 int main() {
