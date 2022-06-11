@@ -9,7 +9,7 @@ struct FlowEdge {
   int v, u;
   ll cap, flow;
 
-  FlowEdge(int a, int b, int c) { v = a, u = b, cap = c, flow = 0; }
+  FlowEdge(int a, int b, ll c) { v = a, u = b, cap = c, flow = 0; }
 };
 
 struct Dinic {
