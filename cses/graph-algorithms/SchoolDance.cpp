@@ -23,7 +23,7 @@ struct Dinic {
 
   int n, m, s, t;
 
-  Dinic(int size, int esize, int source, int sink, vector<pair<ll, pii>> eds) {
+  Dinic(int size, int esize, int source, int sink, vector<pair<ll, pii>>& eds) {
     n = size, m = esize, s = source, t = sink;
     adj.resize(n), level.resize(n), p.resize(n);
     for (int i = 0; i < m; ++i) {
