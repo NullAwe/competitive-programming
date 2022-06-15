@@ -4,7 +4,7 @@ using namespace std;
 #define ll long long
 #define pll pair<ll, ll>
 
-const int MAX_N = 3e5;
+const int MAX_N = 4e5;
 
 vector<pll> t(MAX_N * 2);
 
