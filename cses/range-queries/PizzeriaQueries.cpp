@@ -57,7 +57,7 @@ int qr(int v, int tl, int tr, int l, int r) {
 int qr(int l, int r) { return qr(1, 0, n - 1, l, r); }
 
 int main() {
-  cin >> n; stl.resize(3 * n), str.resize(3 * n);
+  cin >> n; stl.resize(4 * n), str.resize(4 * n);
   int q; cin >> q;
   for (int i = 0; i < n; ++i) {
     int x; cin >> x;
