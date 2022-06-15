@@ -38,7 +38,7 @@ ll query(int v, int tl, int tr, int l, int r) {
 }
 
 int main() {
-  cin >> n; t.resize(3 * n), lazy.resize(3 * n);
+  cin >> n; t.resize(4 * n), lazy.resize(4 * n);
   int q; cin >> q;
   vector<int> arr(n); for (int i = 0; i < n; ++i) cin >> arr[i];
   vector<vector<pii>> qs(n);
