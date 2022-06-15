@@ -35,7 +35,7 @@ STV query(int v, int tl, int tr, int l, int r) {
 }
 
 int main() {
-  cin >> n; t.reserve(3 * n); for (int i = 0; i < 3 * n; ++i) t.push_back(STV(0, 0, 0, 0));
+  cin >> n; t.reserve(4 * n); for (int i = 0; i < 4 * n; ++i) t.push_back(STV(0, 0, 0, 0));
   int m; cin >> m;
   for (int i = 0; i < n; ++i) { int x; cin >> x; modify(1, 0, n - 1, i, x); }
   for (int i = 0; i < m; ++i) {
