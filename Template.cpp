@@ -121,7 +121,6 @@ inline ll inv(ll x) {
   return p(x, MOD - 2);
 }
 
-// Solves one testcase:
 inline void solve() {
 
 }
