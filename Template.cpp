@@ -102,20 +102,34 @@ D@@@@XEmO@RRWW@S8PZ%%XZmNON@PF6|\\|t[[jl?oQD%ZZZZZZZPPPPSo'`'````...............
 using namespace std;
 
 #define ll long long
+#define pii pair<int, int>
 
 const int MOD = 1000000007;
 
+inline ll p(ll x, ll y) {
+  x %= MOD;
+  ll ans = 1;
+  while (y) {
+    if (y & 1) ans = ans * x % MOD;
+    x = x * x % MOD;
+    y >>= 1;
+  }
+  return ans;
+}
+
+inline ll inv(ll x) {
+  return p(x, MOD - 2);
+}
+
 // Solves one testcase:
-void solve() {
+inline void solve() {
 
 }
 
 int main() {
   ios_base::sync_with_stdio(false); cin.tie(NULL);
-  // Comment out the below three lines if there is only one test case per test
-  // (uncomment if already commented out):
-  int t; cin >> t;
+  int t = 1;
+  cin >> t;
   for (int i = 0; i < t; ++i) solve();
-//  solve();
   return 0;
 }
