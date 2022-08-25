@@ -14,11 +14,8 @@ inline void solve() {
       }
       _xor ^= arr[j];
     }
+    if (_xor == arr[i]) last = i;
     if (last == i) continue;
-    if (_xor == arr[i]) {
-      last = i;
-      continue;
-    }
     ++ans;
   }
   cout << ans << '\n';
