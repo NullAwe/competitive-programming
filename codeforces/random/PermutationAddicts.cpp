@@ -24,7 +24,7 @@ void solve() {
         break;
       }
     }
-    if (!nlg.size()) break;
+    if (nlg.empty()) break;
     lg = nlg;
   }
   for (int num : lg) cout << num + 1 << ' ';
