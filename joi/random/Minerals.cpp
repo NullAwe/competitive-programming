@@ -10,9 +10,9 @@ void solve(vector<int> a, vector<int> b) {
     Answer(a[0], b[0]);
     return;
   }
-  int n = a.size() / 2, m = a.size() - n;
-  for (int i = 4; i <= a.size(); i *= 2) --n, ++m;
-  for (int i = 25; i <= a.size(); i *= 2) --n, ++m;
+  int n = a.size() / 2.61803398875;
+  if (n == 0) n = 1;
+  int m = a.size() - n;
   if (on[a[0]]) swap(n, m);
   vector<int> a1(n), a2(m);
   vector<int> b1, b2;
